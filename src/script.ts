@@ -25,10 +25,15 @@ botao.addEventListener("click", function () {
 
 
 // Type em Arrays
-let nome: string[] = ['Sérgio', 'Silvio', 'Luiz'];
+// let nome: string[] = ['Sérgio', 'Silvio', 'Luiz'];
 
-let idades: number[] = [52,54,56,58,60];
+// let idades: number[] = [52,54,56,58,60];
 
-let numeros: number[] = [1,2,3,4,5,6];
+// let numeros: number[] = [1,2,3,4,5,6];
 
-numeros.push(52);
+// numeros.push(52);
+
+// O type any (e quando usá-lo)
+let nomes: any[] = ['Sérgio', 'Silvio', 'Luiz', 53, true];
+
+nomes.push(556);
