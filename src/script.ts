@@ -24,3 +24,11 @@ botao.addEventListener("click", function () {
 // let programador: boolean = true;
 
 
+// Type em Arrays
+let nome: string[] = ['Sérgio', 'Silvio', 'Luiz'];
+
+let idades: number[] = [52,54,56,58,60];
+
+let numeros: number[] = [1,2,3,4,5,6];
+
+numeros.push(52);
