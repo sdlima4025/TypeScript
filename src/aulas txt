@@ -1,0 +1,18 @@
+Módulo 2: Typescript Básico
+16 aulas
+#1: Como não gerar o JS se tiver erro
+#2: Os types primitivos
+#3: Type em Arrays
+#4: O type any (e quando usá-lo)
+#5: Usando types nos parâmetros de uma função
+#6: Usando types no retorno de uma função
+#7: Contextual Typing em funções anônimas
+#8: Types em Objetos
+#9: Propriedades Opcionais
+#10: Union Types (múltiplos types)
+#11: Type e Interface: Como usar e diferenças
+#12: Type Assertions
+#13: Types literais
+#14: Inferência literal
+#15: Type para funções
+#16: Retorno void

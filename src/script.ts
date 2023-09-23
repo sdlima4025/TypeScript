@@ -1,6 +1,9 @@
+// - Módulo 2: Typescript Básico
+
+// #1: Como não gerar o JS se tiver erro
 /**"Toda vez que houver uma mudança tem que executar o 
  * comando de conversão"comando para converter 
- * o js em TS === tsc src/script.ts --outDir Public 
+ * o TS em JS === tsc src/script.ts --outDir Public 
  
 let numero1 = document.getElementById("numero1") as HTMLInputElement;
 let numero2 = document.getElementById("numero2") as HTMLInputElement;
@@ -34,6 +37,66 @@ botao.addEventListener("click", function () {
 // numeros.push(52);
 
 // O type any (e quando usá-lo)
-let nomes: any[] = ['Sérgio', 'Silvio', 'Luiz', 53, true];
+// let nomes: any[] = ['Sérgio', 'Silvio', 'Luiz', 53, true];
 
-nomes.push(556);
+// nomes.push(556);
+
+// Usando types nos parâmetros de uma função
+// function firstLetterUpperCase(name:string) {
+//   let firstLetter = name.charAt(0).toUpperCase();
+//   return firstLetter+name.substring(1);
+// }
+
+// firstLetterUpperCase(90);
+
+
+
+// Usando types no retorno de uma função
+
+//Usando types nos parâmetros de uma função
+// function somar(n1: number, n2:number):number {
+//   return n1 + n2;
+// }
+
+// let total = somar(10,20);
+
+//Contextual(inteligência do typescript) Typing em funções anônimas
+// let names = ['Sérgio', 'Silvio', 'Luiz', 'Paulo', 90];
+
+// names.forEach(function(nome){
+//   if(typeof nome === 'string'){
+//     console.log(nome.toUpperCase());
+//   } else {
+//     console.log(nome);
+//   }
+// });
+
+
+// Types em Objetos
+
+// function resumo(usuario: {nome:string, idade:number}) {
+//   return `Olá ${usuario.nome}, tudo bem? Você tem ${usuario.idade} anos!`
+// }
+
+// // Implementação da function
+// let u = {
+//   nome: 'Sérgio',
+//   idade: 53
+// };
+// resumo(u);
+
+// Propriedades Opcionais === ? no valor.
+function resumo(usuario: {nome:string, idade?:number}) {
+  if(usuario.idade !== undefined) {
+    return `Olá ${usuario.nome}, tudo bem? Você tem ${usuario.idade} anos!`;
+  } else {
+    return `Olá ${usuario.nome}, tudo bem?`;
+  }
+}
+
+// Implementação da function
+let u = {
+  nome: 'Sérgio',
+  idade: 53
+};
+resumo(u);
