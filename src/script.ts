@@ -121,7 +121,121 @@ mostrarIdade('90');
 
 /** Type e Interface: Como usar e diferenças 
  * pascal case === todo nome começa com letra maiscula
-*/
-type NomeCompleto = string;
 
-let nome: NomeCompleto = 'Sérgio';
+// type Objeto - forma um!
+type User = {
+  nome: string,
+  idade: number
+}; 
+type é imutavél
+inteface é mutavél
+*/
+// interface User {
+//   nome: string,
+//   idade: number
+// }
+
+// function resumo(usuario: User) {
+//   return `Olá ${usuario.nome}, você tem ${usuario.idade} anos`;
+// }
+
+// resumo({
+//   nome: 'Sérgio',
+//   idade: 53
+// });
+
+// Type Assertions(ajudando o TS com informação adicional: as HTMLInputElement)
+let idadeField = document.getElementById('idade') as HTMLInputElement;
+
+
+// Types literais
+let nome: 'Sérgio' = 'Sérgio';
+
+nome = 'Sérgio' // type literal string === Sérgio
+
+// exemplo dois
+// function mostrarTexto(
+//   texto: string,
+//   alinhamento: 'left' | 'right' | 'center'
+// ) {
+//   return `<div style='text-alingn: ${alinhamento}'>${texto}</div>`;
+// }
+
+// mostrarTexto('Sérgio', 'left');
+// mostrarTexto('Silvio', 'right');
+// mostrarTexto('Reinaldo', 'blablabla');
+
+// // exemplo dois
+// type Opcoes = {
+//   width: number,
+//   height: number
+// }
+
+// function configurar(props:Opcoes | 'auto'){
+
+// }
+
+// configurar({width:100, height:200});
+// configurar('auto');
+// configurar('automatico');// tipo literal não existe
+
+
+// Inferência literal -> código fraco que se fa necessário uma Inferencia
+// function fazerRequisicao(url: string, method: 'GET' | 'POST') {
+//   // ....
+// }
+// type Methods = 'GET' | 'POST';
+
+// let url = "http://google.com.br";
+// let method: Methods = 'GET';
+// fazerRequisicao(url, method);
+
+//Type para funções
+// type MathFunction = (n1: number, n2: number) => number;
+
+// const somar: MathFunction = (n1, n2) =>{
+//   return n1 + n2;
+// }
+// const subtrair: MathFunction = (n1, n2) =>{
+//   return n1 - n2;
+// }
+// const multiplicar: MathFunction = (n1, n2) =>{
+//   return n1 * n2;
+// }
+// const dividir: MathFunction = (n1, n2) =>{
+//   return n1 / n2;
+// }
+// console.log(somar(10,2));
+
+// Retorno void(sem retorno)
+type QualquerFuncao = () => void;
+
+const algo: QualquerFuncao = () => {
+  return 12;
+}
+
+let retorno = algo();
+const blabla = (): void => {
+  return 123;
+}
+/**
+ Módulo 3: Configurações do Typescript
+ 8 aulas
+ * 
+ */
+
+// #1: Usando o watchMode no arquivo
+
+// #2: Criando o arquivo tsconfig.json
+
+// #3: Escolhendo quais arquivos compilar
+
+// #4: Entendendo o Target
+
+// #5: Trabalhando com Libs no Typescript
+
+// #6: rootDir e outDir
+
+// #7: noComment, noEmit e noEmitOnError
+
+// #8: Configurações para Qualidade do código
