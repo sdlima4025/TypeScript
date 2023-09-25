@@ -85,18 +85,43 @@ botao.addEventListener("click", function () {
 // };
 // resumo(u);
 
+// #9: Propriedades Opcionais
+
 // Propriedades Opcionais === ? no valor.
-function resumo(usuario: {nome:string, idade?:number}) {
-  if(usuario.idade !== undefined) {
-    return `Olá ${usuario.nome}, tudo bem? Você tem ${usuario.idade} anos!`;
+// function resumo(usuario: {nome:string, idade?:number}) {
+//   if(usuario.idade !== undefined) {
+//     return `Olá ${usuario.nome}, tudo bem? Você tem ${usuario.idade} anos!`;
+//   } else {
+//     return `Olá ${usuario.nome}, tudo bem?`;
+//   }
+// }
+
+// // Implementação da function
+// let u = {
+//   nome: 'Sérgio',
+//   idade: 53
+// };
+// resumo(u);
+
+// Union Types (múltiplos types)
+/** em caso de uso agregado de uma função como 
+ * toUpperCase que funciona com string,
+ * se faz necessário verificação.
+function mostrarIdade(idade: string | number) {
+  if(typeof idade === `string`) {
+    console.log(idade.toUpperCase());
   } else {
-    return `Olá ${usuario.nome}, tudo bem?`;
+    console.log(idade);
   }
 }
 
-// Implementação da function
-let u = {
-  nome: 'Sérgio',
-  idade: 53
-};
-resumo(u);
+mostrarIdade(90);
+mostrarIdade('90');
+*/ 
+
+/** Type e Interface: Como usar e diferenças 
+ * pascal case === todo nome começa com letra maiscula
+*/
+type NomeCompleto = string;
+
+let nome: NomeCompleto = 'Sérgio';
