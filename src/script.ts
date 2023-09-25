@@ -208,16 +208,16 @@ nome = 'Sérgio' // type literal string === Sérgio
 // console.log(somar(10,2));
 
 // Retorno void(sem retorno)
-type QualquerFuncao = () => void;
+// type QualquerFuncao = () => void;
 
-const algo: QualquerFuncao = () => {
-  return 12;
-}
+// const algo: QualquerFuncao = () => {
+//   return 12;
+// }
 
-let retorno = algo();
-const blabla = (): void => {
-  return 123;
-}
+// let retorno = algo();
+// const blabla = (): void => {
+//   return 123;
+// }
 /**
  Módulo 3: Configurações do Typescript
  8 aulas
